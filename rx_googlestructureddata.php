@@ -12,7 +12,7 @@ class Rx_googlestructureddata extends Module
     {
         $this->name = 'rx_googlestructureddata';
         $this->tab = 'front_office_features';
-        $this->version = '1.7.0';
+        $this->version = '0.1.0';
         $this->author = 'lr';
         $this->need_instance = 0;
         $this->bootstrap = true;
