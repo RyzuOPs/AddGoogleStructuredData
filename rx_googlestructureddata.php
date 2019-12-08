@@ -28,7 +28,7 @@ class Rx_googlestructureddata extends Module
 
 		$this->defaults = array(
 			$this->mod_prefix.'SHOW_WEBPAGE' , 1,
-            $this->mod_prefix.'SHOW_WEBSITE' , 1,
+			$this->mod_prefix.'SHOW_WEBSITE' , 1,
 			$this->mod_prefix.'SHOW_WEBSITE_SEARCHBOX' , 0,
 			$this->mod_prefix.'SHOW_ORGANIZATION' , 0,
 			$this->mod_prefix.'SHOW_ORGANIZATION_LOGO', 0,
@@ -54,16 +54,15 @@ class Rx_googlestructureddata extends Module
     }
 
 	public function install()
-    {
+	{
 		if (Shop::isFeatureActive()) {
 			Shop::setContext(Shop::CONTEXT_ALL);
-		}
+	}
 
 		$module_hooks = array(
             'header',
-			'backOfficeHeader'.
-			'displayFooter',
-			'displayHeader'
+			'footer',
+			'backOfficeHeader',
         );
 
 		if (!parent::install()
@@ -73,6 +72,7 @@ class Rx_googlestructureddata extends Module
 			{
 				return false;
 			}
+		
 		return true;
 	}
 
