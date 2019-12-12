@@ -41,7 +41,7 @@
 				"telephone" : "{$organization_contact_telephone}",
 			{/if}
 			{if $organization_contact_email}
-				"email" : "{$organization_contact_email}
+				"email" : "{$organization_contact_email}"
 			{/if},
 			"contactType" : "customer service"
 			}
